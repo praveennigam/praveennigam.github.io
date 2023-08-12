@@ -1,0 +1,615 @@
+/* Google Font CDN Link */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+
+/* Custom Scroll Bar CSS */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #6e93f7;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #4070f4;
+}
+
+
+/* navbar styling */
+
+nav {
+    position: fixed;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 998;
+    transition: all 0.3s ease;
+    background: #4070f4;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+nav.sticky {
+    background: #4070f4;
+    padding: 13px 0;
+}
+
+nav .navbar {
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: auto;
+}
+
+nav .navbar .logo a {
+    font-weight: 500;
+    font-size: 35px;
+    color: #4070f4;
+}
+
+nav.sticky .navbar .logo a {
+    color: #fff;
+}
+
+nav .navbar .menu {
+    display: flex;
+    position: relative;
+}
+
+nav .navbar .menu li {
+    list-style: none;
+    margin: 0 8px;
+}
+
+.navbar .menu a {
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+    padding: 6px 0;
+    transition: all 0.4s ease;
+}
+
+.navbar .menu a:hover {
+    color: #a2a3a5;
+}
+
+nav.sticky .menu a {
+    color: #FFF;
+}
+
+nav.sticky .menu a:hover {
+    color: #0E2431;
+}
+
+.navbar .media-icons a {
+    color: #4070f4;
+    font-size: 18px;
+    margin: 0 6px;
+}
+
+nav.sticky .media-icons a {
+    color: #FFF;
+}
+
+
+/* Side Navigation Menu Button CSS */
+
+nav .menu-btn,
+.navbar .menu .cancel-btn {
+    position: absolute;
+    color: #fff;
+    right: 30px;
+    top: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: none;
+}
+
+nav .menu-btn {
+    color: #4070f4;
+}
+
+nav.sticky .menu-btn {
+    color: #FFF;
+    background: #4070f4;
+}
+
+.navbar .menu .menu-btn {
+    color: #fff;
+    background: #4070f4;
+}
+
+
+/* home section styling */
+
+.home {
+    height: 100vh;
+    width: 100%;
+    background: url("data:image/jpeg;base64,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") no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-decoration: none;
+    background-attachment: fixed;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.home .home-content {
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.home .text-one {
+    font-size: 25px;
+    color: #bfe1f5;
+    padding-left: 8%;
+}
+
+.home .text-two {
+    color: white;
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+    padding-left: 8%;
+}
+
+.home .text-three {
+    font-size: 40px;
+    margin: 5px 0;
+    color: #4070f4;
+    padding-left: 8%;
+}
+
+.home .text-four {
+    font-size: 23px;
+    margin: 5px 0;
+    color: #0E2431;
+    padding-left: 8%;
+}
+
+.home .button {
+    margin: 14px 0;
+    padding-left: 8%;
+}
+
+.home .button button {
+    outline: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 25px;
+    font-weight: 400;
+    background: #4070f4;
+    color: #fff;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.4s ease;
+}
+
+.home .button button:hover {
+    border-color: #4070f4;
+    background-color: #fff;
+    color: #4070f4;
+}
+
+
+/* About Section Styling */
+
+
+/* Those Elements Where We Have Apply Same CSS,
+ I'm Selecting Directly 'Section Tag' and 'Class'  */
+
+section {
+    padding-top: 40px;
+}
+
+section .content {
+    width: 80%;
+    margin: 40px auto;
+    font-family: 'Poppins', sans-serif;
+}
+
+.about .about-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section .title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+section .title span {
+    color: #0E2431;
+    font-size: 30px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+section .title span::before,
+section .title span::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #4070f4;
+    left: 0;
+    bottom: 0;
+}
+
+section .title span::after {
+    bottom: -7px;
+    width: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.about .about-details .left {
+    width: 45%;
+}
+
+.about .left img {
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.about-details .right {
+    width: 55%;
+}
+
+section .topic {
+    color: #0E2431;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.about-details .right p {
+    text-align: justify;
+    color: #0E2431;
+}
+
+section .button {
+    margin: 16px 0;
+}
+
+section .button button {
+    outline: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 25px;
+    font-weight: 40;
+    background: #4070f4;
+    color: #fff;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+section .button button:hover {
+    border-color: #4070f4;
+    background-color: #fff;
+    color: #4070f4;
+}
+
+
+/* My Skills CSS */
+
+.skills {
+    background: #F0F8FF;
+}
+
+.skills .content {
+    padding: 40px 0;
+}
+
+.skills .skills-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skills-details .text {
+    width: 50%;
+}
+
+.skills-details p {
+    color: #0E2431;
+    text-align: justify;
+}
+
+.skills .skills-details .experience {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.skills-details .experience .num {
+    color: #0E2431;
+    font-size: 80px;
+}
+
+.skills-details .experience .exp {
+    color: #0E2431;
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 6px;
+}
+
+.skills-details .boxes {
+    width: 45%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.skills-details .box {
+    width: calc(100% / 2 - 20px);
+    margin: 20px 0;
+}
+
+.skills-details .boxes .topic {
+    font-size: 20px;
+    color: #4070f4;
+}
+
+.skills-details .boxes .per {
+    font-size: 60px;
+    color: #4070f4;
+}
+
+
+/* My Services CSS */
+
+.services .boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.services .boxes .box {
+    margin: 20px 0;
+    width: calc(100% / 3 - 20px);
+    text-align: center;
+    border-radius: 12px;
+    padding: 10px 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+    cursor: default;
+    transition: all 0.4s ease;
+}
+
+.services .boxes .box:hover {
+    background: #4070f4;
+    color: #fff;
+}
+
+.services .boxes .box .icon {
+    height: 50px;
+    width: 50px;
+    background: #4070f4;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 18px;
+    color: #fff;
+    margin: 0 auto 10px auto;
+    transition: all 0.4s ease;
+}
+
+.boxes .box:hover .icon {
+    background-color: #fff;
+    color: #4070f4;
+}
+
+.services .boxes .box:hover .topic,
+.services .boxes .box:hover p {
+    color: #0E2431;
+    transition: all 0.4s ease;
+}
+
+.services .boxes .box:hover .topic,
+.services .boxes .box:hover p {
+    color: #fff;
+}
+
+
+/* Contact Me CSS */
+
+.contact {
+    background: #F0F8FF;
+}
+
+.contact .content {
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+.contact .text {
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    height: 8px;
+    width: auto;
+    display: inline;
+}
+
+
+/* Footer CSS */
+
+footer {
+    background: #4070f4;
+    padding: 15px 0;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+footer .text span {
+    font-size: 17px;
+    font-weight: 400;
+    color: #fff;
+}
+
+footer .text span a {
+    font-weight: 500;
+    color: #FFF;
+}
+
+footer .text span a:hover {
+    text-decoration: underline;
+}
+
+
+/* Scroll TO Top Button CSS */
+
+.scroll-button a {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: #fff;
+    background: #4070f4;
+    padding: 7px 12px;
+    ;
+    font-size: 18px;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.15);
+    display: none;
+}
+
+
+/* Responsive Media Query */
+
+@media (max-width: 1190px) {
+    section .content {
+        width: 85%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .about .about-details {
+        justify-content: center;
+        flex-direction: column;
+    }
+    .about .about-details .left {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .about-details .right {
+        width: 90%;
+        margin: 40px 0;
+    }
+    .services .boxes .box {
+        margin: 20px 0;
+        width: calc(100% / 2 - 20px);
+    }
+}
+
+@media (max-width: 900px) {
+    .about .left img {
+        height: 350px;
+        width: 350px;
+    }
+}
+
+@media (max-width: 750px) {
+    nav .navbar {
+        width: 90%;
+    }
+    nav .navbar .menu {
+        position: fixed;
+        left: -100%;
+        top: 0;
+        background: #0E2431;
+        height: 100vh;
+        max-width: 400px;
+        width: 100%;
+        padding-top: 60px;
+        flex-direction: column;
+        align-items: center;
+        transition: all 0.5s ease;
+    }
+    .navbar.active .menu {
+        left: 0;
+    }
+    nav .navbar .menu a {
+        font-size: 23px;
+        display: block;
+        color: #fff;
+        margin: 10px 0;
+    }
+    nav.sticky .menu a:hover {
+        color: #4070f4;
+    }
+    nav .navbar .media-icons {
+        display: none;
+    }
+    nav .menu-btn,
+    .navbar .menu .cancel-btn {
+        display: block;
+    }
+    .home .text-two {
+        font-size: 65px;
+    }
+    .home .text-three {
+        font-size: 35px;
+    }
+    .skills .skills-details {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .skills-details .text {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    .skills-details .boxes {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .services .boxes .box {
+        margin: 20px 0;
+        width: 100%;
+    }
+    .contact .text {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .home .text-two {
+        font-size: 55px;
+        background: url("C:\Users\Dell\Desktop\Html\ppport\Picsart_23-02-13_03-08-19-350 - Copy.jpg") no-repeat;
+    }
+    .home .text-three {
+        font-size: 33px;
+    }
+    .skills-details .boxes .per {
+        font-size: 50px;
+        color: #4070f4;
+    }
+}
